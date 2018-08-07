@@ -16,6 +16,8 @@ function roblib_custom_doi_xref_translator_islandora_doi_content_type_info_alter
 /**
  * Translate response to MODS, contained in a DOMDocument.
  *
+ * Setting genre field of MODS as 'Journal Article' overriding the hard-coded default of 'article'.
+ *
  * @param string $crossref_data
  *   The response to be transformed.
  *
@@ -37,7 +39,7 @@ function roblib_custom_xref_translator_islandora_doi_crossref_translator($crossr
     // Add metadata for journal articles.
     foreach ($crossref_xml->getElementsByTagName('journal') as $journal) {
         $genre = $mods->createElement('genre');
-        $genre->nodeValue = 'article';
+        $genre->nodeValue = 'Journal Article';
         $mods->firstChild->appendChild($genre);
         $relateditem = $mods->createElement('relatedItem');
         $mods->firstChild->appendChild($relateditem);
