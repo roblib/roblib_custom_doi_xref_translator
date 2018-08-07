@@ -1,0 +1,9 @@
+name = Roblib Custom DOI XRef Translator
+description = "Implements hook alter to override DOI crossref translator."
+package = Islandora Custom
+dependencies[] = islandora
+dependencies[] = islandora_scholar
+version = 7.x-1.11
+core = 7.x
+files[] = roblib_custom_doi_xref_translator.info
+files[] = roblib_custom_doi_xref_translator.module
