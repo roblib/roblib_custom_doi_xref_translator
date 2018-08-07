@@ -1,5 +1,6 @@
 name = Roblib Custom DOI XRef Translator
-description = "Implements hook alter to override DOI crossref translator."
+description = "Implements hook_islandora_doi_content_type_info_alter to override DOI crossref translator. Specifically
+changing hard-coded 'article' setting of genre field in MODS to 'Journal Article'."
 package = Islandora Custom
 dependencies[] = islandora
 dependencies[] = islandora_scholar
