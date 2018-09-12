@@ -25,7 +25,7 @@ function roblib_custom_doi_xref_translator_islandora_doi_content_type_info_alter
  *   The translated document as a DOMDocument; otherwise, boolean FALSE on
  *   failure.
  */
-function roblib_custom_xref_translator_islandora_doi_crossref_translator($crossref_data) {
+function roblib_custom_doi_xref_translator_islandora_doi_crossref_translator($crossref_data) {
 
     // Parse the source into a DOMDocument.
     $crossref_xml = new DOMDocument("1.0");
